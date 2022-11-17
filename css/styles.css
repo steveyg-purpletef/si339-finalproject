@@ -1,0 +1,95 @@
+body {
+    margin: 0px;
+}
+header{
+    display: grid;
+    align-content: center;
+    height: 50px;
+    background-color: aliceblue;
+    padding-left: 2vw;
+}
+
+header nav{
+    position: sticky;
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+    justify-items: center;
+    justify-content: start;
+}
+nav a {
+    font-size: 25px;
+}
+/* #toMain{
+    position: absolute;
+    top: -50px;
+} */
+#toMain:focus, #toMain:hover{
+    top: 50px;
+    border: 2px solid black;
+    background-color: white;
+}
+
+main{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main h1{
+    margin: 0px;
+    text-decoration: underline;
+}
+.container{
+    display: flex;
+    max-width: 80%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.container img{
+    width: 250px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    margin: 5px;
+}
+.container img:hover{
+    width: 400px;
+    
+}
+#toTop{
+    position: absolute;
+    right: 0px;
+    border: 2px solid black;
+    padding: 2px;
+    background-color: white;
+}
+#toTop:focus{
+    border: 2px solid black;
+    background-color: white;
+}
+.grid_container{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    justify-content: center;
+}
+.grid_container :nth-child(n){
+    grid-column-end: span 4;
+}
+
+.person{
+    display: grid;
+    margin: 10px;
+    border: 2px solid blueviolet;
+    padding: 15px;
+    justify-items: center;
+    max-width: 100%;
+}
+.person img{
+    max-width: 90%;
+}
+
+@media screen and (min-width: 600px){
+    .grid_container :nth-child(n){
+        grid-column-end: span 2;
+    }
+}
