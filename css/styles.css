@@ -1,29 +1,74 @@
 body {
     margin: 0px;
+    background-color: #FBEEC1;
+    font-family: 'Alexandria', sans-serif;
 }
 header{
+    position: sticky;
     display: grid;
     align-content: center;
     height: 50px;
-    background-color: aliceblue;
-    padding-left: 2vw;
+    background-color: #c8854b;
+    top: 0;
+}
+.nutrition_background{
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;
+    background-color: lightgray;
+    opacity: 95%;
+    z-index: 99;
+}
+/* .nutrition_background p{
+    position: fixed;
+    background-color: white;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    padding: 1px;
+    border: 2px solid black;
+} */
+.nutrition{
+    display: none;
+    position: fixed;
+    z-index: 100;
+}
+.nutrition img{
+    width: calc(100%, 300px);
+    margin-bottom: 1vh;
+}
+.nutrition p{
+    text-align: center;
+    background-color: white;
+    padding: 1px;
+    border: 2px solid black;
 }
 
 header nav{
-    position: sticky;
     display: grid;
     grid-template-columns: 25% 25% 25%;
     justify-items: center;
-    justify-content: start;
+    justify-content: center;
+    align-items: center;
 }
 nav a {
-    font-size: 25px;
+    font-size: min(5vw, 5vh);
+    text-decoration: none;
+    padding: 3px;
+    text-align: center;
 }
-/* #toMain{
+nav a:visited, nav {
+    color: black;
+}
+nav a:hover{
+    background-color: #DAAD86;
+}
+#tomain{
     position: absolute;
     top: -50px;
-} */
-#toMain:focus, #toMain:hover{
+}
+#tomain:focus, #tomain:hover{
     top: 50px;
     border: 2px solid black;
     background-color: white;
@@ -35,35 +80,37 @@ main{
     flex-direction: column;
     align-items: center;
 }
+homepage_image{
+    width: min(100%,350px);
+}
+h1 {
+    font-size: 30px;
+}
 main h1{
     margin: 0px;
     text-decoration: underline;
 }
 .container{
     display: flex;
-    max-width: 80%;
-    flex-direction: row;
+    max-width: 90%;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
 }
 .container img{
     width: 250px;
     box-sizing: border-box;
-    border: 1px solid black;
+    border: 3px solid red;
     margin: 5px;
 }
-.container img:hover{
-    width: 400px;
-    
-}
-#toTop{
+#totop{
     position: absolute;
     right: 0px;
     border: 2px solid black;
     padding: 2px;
     background-color: white;
 }
-#toTop:focus{
+#totop:focus{
     border: 2px solid black;
     background-color: white;
 }
@@ -79,7 +126,7 @@ main h1{
 .person{
     display: grid;
     margin: 10px;
-    border: 2px solid blueviolet;
+    border: 3px solid red;
     padding: 15px;
     justify-items: center;
     max-width: 100%;
@@ -88,8 +135,25 @@ main h1{
     max-width: 90%;
 }
 
-@media screen and (min-width: 600px){
+/* Medium Screens */
+@media screen and (min-width: 640px){
     .grid_container :nth-child(n){
-        grid-column-end: span 2;
+        grid-column: auto / span 2;
+    }
+    homepage_image{
+        width: 400px;
+    }
+    .container{
+        flex-direction: row;
+    }
+}
+
+/* Larger Screens */
+@media screen and (min-width: 1000px) {
+    .grid_container :nth-child(n){
+        grid-column: auto / span 1;
+    }
+    homepage_image{
+        width: 550px;
     }
 }
