@@ -7,7 +7,7 @@ header{
     position: sticky;
     display: grid;
     align-content: center;
-    height: 50px;
+    height: 100px;
     background-color: #c8854b;
     top: 0;
 }
@@ -47,13 +47,13 @@ header{
 
 header nav{
     display: grid;
-    grid-template-columns: 25% 25% 25%;
+    grid-template-columns: 50%;
     justify-items: center;
     justify-content: center;
     align-items: center;
 }
 nav a {
-    font-size: min(5vw, 5vh);
+    font-size: 25px;
     text-decoration: none;
     padding: 3px;
     text-align: center;
@@ -146,6 +146,17 @@ main h1{
     .container{
         flex-direction: row;
     }
+    header{
+        height: 50px;
+    }
+    header nav{
+        grid-template-columns: 25% 25% 25%;
+        justify-items: center;
+        justify-content: center;
+    }
+    nav a{
+        font-size: 30px;
+    }
 }
 
 /* Larger Screens */
@@ -155,5 +166,17 @@ main h1{
     }
     .homepage_image{
         width: 550px;
+    }
+    header nav{
+        justify-items: start;
+        justify-content: start;
+    }
+    nav a{
+        font-size: 40px;
+        width: 95%;
+        text-align: left;
+    }
+    .container{
+        justify-content: space-around;
     }
 }

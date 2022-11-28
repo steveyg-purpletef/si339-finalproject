@@ -25,7 +25,7 @@ window.addEventListener("load", ()=>{
     }
     else{
         document.querySelector("#aboutpage").style.cssText = `
-            border: 2px solid black; width: calc(100% + 2px); text-align: center;
+            border: 2px solid black; width: 100%;
         `;
     }
 })
