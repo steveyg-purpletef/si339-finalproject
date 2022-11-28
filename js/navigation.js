@@ -5,9 +5,9 @@ window.addEventListener("load", ()=>{
     }
     else if(document.URL.includes("menu.html")){
         document.querySelector("#menupage").style.border = "2px solid black";
-        var pizza = document.querySelectorAll("div img");
-        var pizzapopup = document.querySelector(".nutrition");
-        var background = document.querySelector(".nutrition_background");
+        let pizza = document.querySelectorAll("div img");
+        let pizzapopup = document.querySelector(".nutrition");
+        let background = document.querySelector(".nutrition_background");
         pizza.forEach((e) => {
             e.addEventListener("click", ()=>{
                 pizzapopup.style.display = "inline";
